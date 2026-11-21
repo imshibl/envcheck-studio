@@ -318,7 +318,7 @@ export function buildMarkdownReport(result: ComparisonResult): string {
   if (report.issues.length === 0) return `${header}\n\nNo configuration issues found.\n`;
 
   const rows = report.issues.map((issue) => {
-    const key = issue.key ? `\`${issue.key.replaceAll("`", "\\`")}\`` : "—";
+    const key = issue.key ? `\`${issue.key.replaceAll("`", "\\`")}\`` : "-";
     const side = issue.side ? ` (${issue.side})` : "";
     return `| ${issue.severity} | ${issue.category} | ${key} | ${issue.detail}${side} | ${issue.suggestion} |`;
   });

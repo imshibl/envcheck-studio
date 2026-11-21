@@ -43,13 +43,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "EnvCheck — Private .env comparison and validation" },
+      { title: "EnvCheck - Private .env comparison and validation" },
       {
         name: "description",
         content:
           "Compare and validate .env files in your browser. Find missing variables, duplicate declarations, empty values, syntax errors, and configuration differences without sending secrets anywhere.",
       },
-      { property: "og:title", content: "EnvCheck — Private .env comparison and validation" },
+      { property: "og:title", content: "EnvCheck - Private .env comparison and validation" },
       {
         property: "og:description",
         content: "Compare and validate .env files locally, with no uploads or saved secrets.",
@@ -595,7 +595,7 @@ function IssueRow({
       <TableCell className="pt-3.5 text-xs font-medium text-foreground">{issueTitles[issue.type]}</TableCell>
       <TableCell className="pt-3.5">
         <code className="break-all rounded-sm bg-editor px-1.5 py-1 font-mono text-[11px] text-foreground">
-          {issue.key ?? "—"}
+          {issue.key ?? "-"}
         </code>
         <div className="mt-1.5 text-[10px] text-muted-foreground">{sideLabel}{issue.line ? ` · line ${issue.line}` : ""}</div>
       </TableCell>
